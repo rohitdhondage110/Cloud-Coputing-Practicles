@@ -1,1 +1,71 @@
 https://drive.google.com/file/d/1HxcGgucR9OBd3jt-cmwBKDkNvYuY0q5r/view?usp=drivesdk
+
+
+steps for practicle 4 
+🧪 Practical 4
+🎯 Title
+
+Transfer files from one virtual machine to another virtual machine
+
+📝 Steps (Write in Journal)
+🔹 Step 1: Install VirtualBox
+Download and install
+👉 Oracle VM VirtualBox
+🔹 Step 2: Get Ubuntu Image
+Download Ubuntu ISO OR VMDK
+👉 Ubuntu
+🔹 Step 3: Create Virtual Machines
+VM1:
+Name: VM1
+Type: Linux
+Version: Ubuntu (64-bit)
+RAM: 2 GB
+Attach: Existing VMDK file
+VM2:
+Repeat same steps
+Name: VM2
+🔹 Step 4: Configure Network
+
+For BOTH VMs:
+
+Go to Settings → Network
+Adapter 1:
+Attached to → Bridged Adapter
+Select → Wi-Fi / Ethernet
+🔹 Step 5: Start Both VMs
+Login using:
+username: vagrant
+password: vagrant
+🔹 Step 6: Get IP Address
+
+In both VMs:
+
+ifconfig
+🔹 Step 7: Test Connectivity
+
+From VM1:
+
+ping <VM2-IP>
+
+👉 Stop using:
+
+Ctrl + C
+🔹 Step 8: Install SSH
+
+In BOTH VMs:
+
+sudo apt update
+sudo apt install openssh-server
+🔹 Step 9: Create File in VM1
+nano file.txt 
+Write content
+Save: Ctrl + O → Enter
+Exit: Ctrl + X
+🔹 Step 10: Transfer File (SCP)
+scp file.txt vagrant@<VM2-IP>:/home/vagrant/
+🔹 Step 11: Verify in VM2
+ls
+cat file.txt
+🎯 Result
+
+The file was successfully transferred from one virtual machine to another using SCP over SSH.
