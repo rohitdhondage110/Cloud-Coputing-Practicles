@@ -1,0 +1,46 @@
+📝 Steps (Write this in your journal)
+🔹 Step 1: Install Required Software
+Install Java Development Kit (version 8 or 11 recommended)
+Install Eclipse IDE
+🔹 Step 2: Download CloudSim
+Download CloudSim JAR file
+Extract the downloaded file
+🔹 Step 3: Create Java Project
+Open Eclipse
+Create a new Java Project
+Create a package (e.g., cloudsim.practice)
+🔹 Step 4: Add CloudSim Library
+Right-click project → Build Path → Configure Build Path
+Add CloudSim JAR as External Library (Classpath)
+🔹 Step 5: Create Basic Simulation
+Create a Java class (FirstSimulation)
+Initialize CloudSim
+Create:
+Datacenter
+Virtual Machine (VM)
+Cloudlet (task)
+Run simulation
+🔹 Step 6: Verify Output
+Check:
+Cloudlet execution
+Status = SUCCESS
+Execution time
+🔹 Step 7: Implement Custom Scheduling
+Create a new class PriorityBroker
+Extend DatacenterBroker
+Override submitCloudlets() method
+🔹 Step 8: Apply Scheduling Logic
+Sort cloudlets based on priority (length)
+Execute higher priority tasks first
+🔹 Step 9: Modify Main Program
+Replace default broker with custom broker
+Create multiple cloudlets
+🔹 Step 10: Run Simulation Again
+Observe execution order
+Verify priority-based scheduling
+🔹 Step 11: Analyze Results
+Compare execution order
+Confirm custom algorithm is working
+🎯 Result (Write this)
+
+The cloud environment was successfully simulated using CloudSim. A custom Priority-Based Scheduling algorithm was implemented, and cloudlets were executed based on priority.
