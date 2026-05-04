@@ -1,0 +1,43 @@
+🚀 EC2 Virtual Machine Creation – Full Steps
+🔹 Step 1: Login to AWS
+Open: https://aws.amazon.com/
+Click Sign In
+Login using your AWS account
+🔹 Step 2: Open EC2 Dashboard
+In search bar → type EC2
+Click EC2 Dashboard
+🔹 Step 3: Launch Instance
+Click Launch Instance
+🔹 Step 4: Configure Instance
+1. Name
+Enter: MyFirstVM
+2. Choose OS (AMI)
+Select: Amazon Linux 2023
+3. Instance Type
+Choose: t2.micro / t3.micro (Free tier)
+4. Key Pair (IMPORTANT)
+Click Create new key pair
+Name: my-key
+Type: .pem
+Download and save safely
+5. Network Settings
+Allow:
+✅ SSH (Port 22)
+✅ HTTP (Port 80)
+🔹 Step 5: Launch Instance
+Click Launch Instance
+🔹 Step 6: Check Instance Status
+Go to Instances
+Verify:
+State = Running
+Public IP generated
+🔹 Step 7: Security Configuration
+Open Security Group
+Check inbound rule:
+Type	Port	Source
+SSH	22	0.0.0.0/0
+🔹 Step 8: Connect to Instance
+Method 1 (Browser – sometimes fails)
+Click Connect
+Select EC2 Instance Connect
+Click Connect
